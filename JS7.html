@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Q7</title>
+
+    <style>
+        h2{
+            text-align: center;
+            color: darkred;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        p{
+            text-align: center;
+            color: black;
+            padding-top: 30px;
+            font-weight: bold;
+        }
+
+        body{
+            background: repeating-linear-gradient(to left, lightgreen, lightblue);
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Q7: Write a JavaScript program that accept two integers and display the larger using findLarge() function</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-md-4">
+
+            </div>
+            <div class="col col-12 col-md-4">
+                <table class="table">
+                    <form>
+                        <tr>
+                            <td>Integer 1</td>
+                            <td><input type="number" id="num1" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td>Integer 2</td>
+                            <td><input type="number" id="num2" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="button" class="btn btn-success" onclick="findLarge();">See the largest</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="result"></p></td>
+                        </tr>
+                    </form>
+                </table>
+            </div>
+            <div class="col col-12 col-md-4">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function findLarge(){
+
+            var a= document.getElementById("num1").value;
+            var b= document.getElementById("num2").value;
+
+            if(num1>num2){
+                document.getElementById("result").innerHTML=a+" is the largest";
+            }
+            else{
+                document.getElementById("result").innerHTML=b+" is the largest";
+            }
+        }
+    </script>
+
+</body>
+</html>

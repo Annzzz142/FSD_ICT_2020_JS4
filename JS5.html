@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Q5</title>
+
+    <style>
+        h2{
+            text-align: center;
+            color: chartreuse;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        body{
+            background: repeating-linear-gradient(to left, RED, BLACK);
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Q5: Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, 
+        check if the current number is odd or even, and display the message to the screen as odd or even</h2>
+
+        <div class="center">
+            <button type="button" class="btn btn-primary" onclick="oddOrEven();">iterate through 1 to 15</button>
+        </div>
+
+        <script>
+            function oddOrEven(){
+                for(var i=1; i<=15; i++){
+                if(i%2==0){
+                    //document.getElementById("result").innerHTML=i+" is Even";
+                    alert(i+" is Even");
+                }
+                else{
+                    //document.getElementById("result").innerHTML=i+" is Odd";
+                    alert(i+" is Odd");
+                }
+            }
+            }
+        </script>
+</body>
+</html>

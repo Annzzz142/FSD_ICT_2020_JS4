@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Q6</title>
+
+    <style>
+        h2{
+            text-align: center;
+            color: darkred;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        p{
+            text-align: center;
+            color: black;
+            padding-top: 30px;
+            font-weight: bold;
+        }
+
+        body{
+            background: repeating-linear-gradient(to left, lightgreen, lightblue);
+        }
+
+        .container {
+            height: 250px;
+            position: relative;
+            border: none;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="center">
+            <h2>Q6: Write a JavaScript function to truncate a string if it's longer than the specified number of characters</h2>
+            
+            <input type="text" placeholder="Enter a string" id="string"><br><br>
+            <input type="number" placeholder="Enter a number of character to truncate the string" id="lim"><br><br><br>
+            <button type="button" class="btn btn-warning" onclick="truncateString();">Truncate</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+
+
+    <script>
+        function truncateString(){
+            var str= document.getElementById("string").value;
+            var limit= document.getElementById("lim").value;
+            //var res="";
+
+            if(str.length>limit){
+                str= str.substr(0,len-1);
+            }
+
+            //document.getElementById("result").innerHTML=str;
+            console.log(str);
+        }
+        
+    </script>
+
+</body>
+</html>

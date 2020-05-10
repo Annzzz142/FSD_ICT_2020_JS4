@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Q1</title>
+
+    <style>
+        h2{
+            text-align: center;
+            color: darkred;
+            padding-top: 150px;
+        }
+
+        p{
+            font-size: x-large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        body{
+            background: linear-gradient(to left, red, yellow);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Q1: Write a JavaScript functiont get an array and to read the first element of an array. Check whether it is prime or not.</h2>
+
+    <p id="array"></p><br><br><br>
+    <p id="result" style="text-decoration: underline;"></p>
+
+    <script>
+
+        var array = [];
+        
+        for(var i=0; i<10; i++){
+
+            array[i]= prompt('Enter element'+(i+1));
+        }
+
+        //console.log(array);
+
+        document.getElementById("array").innerHTML= "Array: "+array;
+        document.getElementById("result").innerHTML= "first element: "+array[0];
+     
+    </script>
+
+</body>
+</html>

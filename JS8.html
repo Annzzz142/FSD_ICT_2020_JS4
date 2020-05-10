@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Q8</title>
+
+    <style>
+        h2{
+            text-align: center;
+            color: darkred;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        p{
+            color: black;
+            padding-top: 30px;
+            font-weight: bold;
+        }
+
+        body{
+            background: repeating-linear-gradient(to left, lightgreen, lightblue);
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Q8: Write a JavaScript program using for…in to read the objects from an array entered
+        by an user and to arrange it in alphabetical order</h2>
+
+        <div class="container">
+            <div class="row">
+                <table class="table">
+                    <div class="col col-12 col-md-4">
+
+                    </div>
+                    <div class="col col-12 col-md-4">
+                        <tr>
+                            <td>Enter a string</td>
+                            <td><input type="text" id="string" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button type="button" class="btn btn-primary" onclick="sortArray();">Sort</button></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><p id="result"></p></td>
+                        </tr>
+                    </div>
+                    <div class="col col-12 col-md-4">
+    
+                    </div>
+                </table>
+            </div>
+        </div>
+
+    <script>
+        var str= document.getElementById("string").value;
+
+        function sortArray(){
+
+            for(const item in str) {
+                str.sort();
+                document.getElementById("result").innerHTML=str;
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

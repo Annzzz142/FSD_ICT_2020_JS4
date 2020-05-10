@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Q2</title>
+
+    <style>
+        h2{
+            text-align: center;
+            color: darkred;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        p{
+            text-align: center;
+            color: black;
+            padding-top: 30px;
+            font-weight: bold;
+        }
+
+        body{
+            background: repeating-linear-gradient(to left, lightgreen, lightblue);
+        }
+
+        .container {
+            height: 150px;
+            position: relative;
+            border: 3px solid green;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Q2: Write a JavaScript program to find the most frequent item of an array</h2>
+
+    <div class="container">
+        <div class="center">
+            <button type="button" class="btn btn-primary" onclick="arrayInput();">Input the array</button>
+            <p id="array"></p>
+        </div>
+    </div>
+
+    <br><br><br>
+    <div class="container">
+        <div class="center">
+            <button type="button" class="btn btn-success" onclick="freqItem();">See the most frequent item</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        function arrayInput(){
+
+            var array =[];
+
+            for(var i=0; i<10; i++){
+                array[i]= prompt('Enter element'+(i+1));
+            }
+
+            document.getElementById("array").innerHTML="Given array: "+array;
+        }
+
+        function freqItem(){
+
+            var count = 1;
+            var m = 0;
+            var item;
+
+            for (var i = 0; i < array.length; i++) {
+                for (var j = i; j < array.length; j++) {
+                    if (array[i] == array[j]){
+                         m++;
+                    }
+                    if (count < m) {
+                        count = m;
+                        item = array[i];
+                    }
+                }
+                m = 0;
+            }
+
+            document.getElementById("result").innerHTML= "most frequent item in the given array is: "+item+ " ( " +count+ " times ) ";
+        }
+        
+    </script>
+</body>
+</html>

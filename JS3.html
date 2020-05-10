@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Q3</title>
+
+    <style>
+        h2{
+            text-align: center;
+            color: darkred;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        p{
+            color: black;
+            padding-top: 30px;
+            font-weight: bold;
+        }
+
+        body{
+            background: repeating-linear-gradient(to left, lightgreen, lightblue);
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Q3: Write a JavaScript program which accept a string as input and swap the case of each character. For example, if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-md-4">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </div>
+            <div class="col col-12 col-md-4">
+                <table class="table">
+                    <tr>
+                        <td>Enetr the string</td>
+                        <td><input type="text" id="string"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="button" class="btn btn-primary" onclick="changeCase();">Swap the case</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><p id="result"></p></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col col-12 col-md-4">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function changeCase(){
+            var str=document.getElementById("string").value;
+            var output = "";
+                for(var i= 0; i< str.length; i++){
+                var ch= str[i];
+
+                if(ch === ch.toUpperCase()){
+                    output += ch.toLowerCase();
+                }
+                else{
+                    output += ch.toUpperCase();
+                }           
+            }
+
+            document.getElementById("result").innerHTML= output;
+        }
+    </script>
+
+</body>
+</html>
